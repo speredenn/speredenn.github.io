@@ -5,8 +5,9 @@
 :Status: draft
 :Lang: fr
 
+* https://www.youtube.com/watch?v=6FkG-Bh9J9c Real life hero
 * http://www.ted.com/talks/pico_iyer_the_art_of_stillness
-* https://www.youtube.com/watch?v=2sD-NXQhuq0
+* https://www.youtube.com/watch?v=2sD-NXQhuq0 Un jour par jour
 * http://www.ted.com/talks/andy_puddicombe_all_it_takes_is_10_mindful_minutes
 * http://www.ted.com/talks/matthieu_ricard_on_the_habits_of_happiness
 * http://www.ted.com/talks/pico_iyer_where_is_home
