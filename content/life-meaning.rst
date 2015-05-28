@@ -1,6 +1,6 @@
 :Title: Ressources pour une vie meilleure
 :Date: 2015-05-28 22:14
-:Slug: food-sec
+:Slug: life-resources
 :Category: Sujets de fond
 :Status: draft
 :Lang: fr
