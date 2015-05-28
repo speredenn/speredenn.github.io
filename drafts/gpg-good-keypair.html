@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+        <meta charset="utf-8" />
+        <title>Créer une bonne clef GPG</title>
+        <link rel="stylesheet" href="https://speredenn.github.io/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+<a href="https://github.com/speredenn/speredenn.github.io">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="https://speredenn.github.io/">speredenn's notebook </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="https://speredenn.github.io/category/bonnes-pratiques.html">Bonnes pratiques</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://speredenn.github.io/drafts/gpg-good-keypair.html" rel="bookmark"
+           title="Permalink to Créer une bonne clef GPG">Créer une bonne clef GPG</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-26T23:14:00+02:00">
+                Published: Tue 26 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://speredenn.github.io/author/speredenn.html">speredenn</a>
+        </address>
+<p>In <a href="https://speredenn.github.io/category/bonnes-pratiques.html">Bonnes pratiques</a>. </p>
+
+</footer><!-- /.post-info -->      <div class="section" id="creer-sa-clef-pour-signer">
+<h2>Créer sa clef pour signer</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>gpg --gen-key
+</pre></div>
+</td></tr></table><ul class="simple">
+<li>RSA (signature seule)</li>
+<li>4096</li>
+<li>0 n'expire jamais</li>
+</ul>
+</div>
+<div class="section" id="creer-ses-sous-clefs">
+<h2>Créer ses sous-clefs</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre>gpg --list-keys <span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span>
+gpg --edit-key <span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span>
+</pre></div>
+</td></tr></table><ul class="simple">
+<li>addkey</li>
+<li>RSA (sign only)</li>
+<li>4096</li>
+<li>Choose an expiry date</li>
+<li>addkey</li>
+<li>RSA (chiffrement seul)</li>
+<li>4096</li>
+<li>Choose an expiry date</li>
+<li>save</li>
+</ul>
+</div>
+<div class="section" id="ameliorer-les-options-par-defaut">
+<h2>Améliorer les options par défaut</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>gpg --edit-key <span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span>
+</pre></div>
+</td></tr></table><ul class="simple">
+<li>setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB
+BZIP2 ZIP Uncompressed</li>
+<li>save</li>
+</ul>
+</div>
+<div class="section" id="sauvegarde">
+<h2>Sauvegarde</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="nb">umask </span>077; tar -cf <span class="nv">$HOME</span>/gnupg-backup.tar -C <span class="nv">$HOME</span> .gnupg
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="retirer-la-clef-privee-maitre-du-trousseau">
+<h2>Retirer la clef privée maitre du trousseau</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre>gpg --export-secret-subkeys <span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span> &gt; secret-subkeys
+gpg --delete-secret-key <span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span>
+gpg --import secret-subkeys
+shred shred -n 5 -u secret-subkeys
+</pre></div>
+</td></tr></table><ul class="simple">
+<li>gpg -K montre &quot;sec#&quot; à la place de &quot;sec&quot;.</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>gpg --edit-key <span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span>
+</pre></div>
+</td></tr></table><ul class="simple">
+<li>passwd</li>
+<li>save</li>
+</ul>
+</div>
+<div class="section" id="si-la-clef-maitre-est-necessaire">
+<h2>Si la clef maitre est nécessaire</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>gpg --homedir<span class="o">=</span>/chemin/vers/sauvegarde -K
+</pre></div>
+</td></tr></table><p>or</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="nb">export </span><span class="nv">GNUPGHOME</span><span class="o">=</span>/chemin/vers/sauvegarde
+gpg -K
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="revocation">
+<h2>Revocation</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre>gpg --gen-revoke --armor <span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span> &gt; <span class="nv">$HOME</span>/<span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span>-revoke.gpg
+gpg --export-secret-keys --armor <span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span> &gt; <span class="nv">$HOME</span>/<span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span>-private.gpg
+gpg --export --armor <span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span> &gt; <span class="nv">$HOME</span>/<span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span>-public.gpg
+</pre></div>
+</td></tr></table><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="nb">export </span><span class="nv">GNUPGHOME</span><span class="o">=</span>/chemin/vers/sauvegarde
+gpg --edit-key <span class="o">[</span>IDENTIFIANT-CLEF<span class="o">]</span>
+</pre></div>
+</td></tr></table><ul class="simple">
+<li>list</li>
+<li>key [NUMERO]</li>
+<li>revkey</li>
+<li>save</li>
+</ul>
+<p>Envoyer la clef sur les serveurs de clefs</p>
+<ul class="simple">
+<li><a class="reference external" href="https://gaffer.ptitcanardnoir.org/intrigeri/code/parcimonie/">https://gaffer.ptitcanardnoir.org/intrigeri/code/parcimonie/</a></li>
+<li><a class="reference external" href="https://wiki.debian.org/Subkeys?action=show&amp;redirect=subkeys">https://wiki.debian.org/Subkeys?action=show&amp;redirect=subkeys</a></li>
+<li><a class="reference external" href="https://wiki.debian.org/Keysigning">https://wiki.debian.org/Keysigning</a></li>
+<li><a class="reference external" href="http://keyring.debian.org/creating-key.html">http://keyring.debian.org/creating-key.html</a></li>
+<li><a class="reference external" href="https://alexcabal.com/creating-the-perfect-gpg-keypair/">https://alexcabal.com/creating-the-perfect-gpg-keypair/</a></li>
+</ul>
+</div>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="https://tails.boum.org/">Tails</a></li>
+                            <li><a href="https://www.gnupg.org/">GNUPG</a></li>
+                            <li><a href="https://www.torproject.org/">Tor</a></li>
+                            <li><a href="http://git-scm.com/about/">Git</a></li>
+                            <li><a href="http://mercurial.selenic.com/">Mercurial</a></li>
+                            <li><a href="http://www.mozilla.org/">Mozilla</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://www.facebook.com/speredenn">Facebook</a></li>
+                            <li><a href="https://www.twitter.com/speredenn">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'speredenn-notebook';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
