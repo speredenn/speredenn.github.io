@@ -10,15 +10,15 @@ channel** because I'm concerned about the security and privacy of my
 network and of our communications. Consequently, I invite you to send
 me your messages through any of the following secured channels:
 
-* By E-mail (at jbc *at* gmx.se, for instance, or `tp any of my
-  *certified E-mail addresses
-  *<https://pgp.mit.edu/pks/lookup?op=vindex&search=0xA3EF734C0A6C388C>`_),
+* By E-mail (at jbc *at* gmx.se, for instance, or `to any of my
+  certified E-mail addresses
+  <https://pgp.mit.edu/pks/lookup?op=vindex&search=0xA3EF734C0A6C388C>`_),
   **encrypting your messages** with `GPG
-  *<https://en.wikipedia.org/wiki/GNU_Privacy_Guard>`_;
+  <https://en.wikipedia.org/wiki/GNU_Privacy_Guard>`_;
 
-* Through any of the following instant messaging services, **encrypting
-  our messages** with `OTR
-  *<https://en.wikipedia.org/wiki/Off-the-Record_Messaging>`_:
+* Through any of the following instant messaging services,
+  **encrypting our messages** with `OTR
+  <https://en.wikipedia.org/wiki/Off-the-Record_Messaging>`_:
 
   * `Facebook <https://www.facebook.com/>`_ (speredenn *at* facebook.com);
   * `Twitter <https://www.twitter.com/>`_ (speredenn *at* twitter.com) ;
