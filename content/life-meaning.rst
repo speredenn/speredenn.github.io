@@ -15,3 +15,7 @@
 * http://www.ted.com/talks/esther_perel_the_secret_to_desire_in_a_long_term_relationship
 * http://www.ted.com/talks/esther_perel_rethinking_infidelity_a_talk_for_anyone_who_has_ever_loved
 * https://www.ted.com/talks/yann_dall_aglio_love_you_re_doing_it_wrong
+
+* « Un métier n’est pas là pour vous emprisonner mais pour vous rendre
+  libre »
+  http://www.bastamag.net/Le-boulanger-qui-reinventa-son-metier-pour-se-liberer
