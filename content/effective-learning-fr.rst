@@ -5,4 +5,4 @@
 :Status: draft
 :Lang: fr
 
-* `Learn languages, lear cultures, Breaking the language barrier, Tim Doner, TEDxTeen 2014 <https://www.youtube.com/watch?v=xNmf-G81Irs>`_
+* `Learn languages, learn cultures, Breaking the language barrier, Tim Doner, TEDxTeen 2014 <https://www.youtube.com/watch?v=xNmf-G81Irs>`_
