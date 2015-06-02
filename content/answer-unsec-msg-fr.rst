@@ -68,3 +68,8 @@ communication cités ci-dessus !
          <https://www.eff.org/pages/tor-and-https>`_ très bien
          pourquoi cela pourrait t'intéresser d'utiliser ces outils et
          protocoles.
+
+.. image:: https://i.imgur.com/hLa1Cma.jpg
+   :width: 600 px
+   :alt: Citation de Snowden à propos du droit à la vie privée
+   :align: center

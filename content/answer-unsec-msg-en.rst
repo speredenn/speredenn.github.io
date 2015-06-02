@@ -68,3 +68,8 @@ Best!
          <https://www.eff.org/about>`_ `explains
          <https://www.eff.org/pages/tor-and-https>`_ clearly why you
          might be interested to use this tool and protocol.
+
+.. image:: https://i.imgur.com/hLa1Cma.jpg
+   :width: 600 px
+   :alt: Snowden quote about right to privacy
+   :align: center
