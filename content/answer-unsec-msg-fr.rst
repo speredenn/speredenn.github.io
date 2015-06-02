@@ -76,9 +76,9 @@ communication cités ci-dessus !
 
 .. epigraph::
 
-   "Prétendre que vous n'avez rien à faire du droit à une vie privée
-   car vous n'avez rien à cacher n'est en rien différent de prétendre
-   que vous n'avez rien à faire de la liberté d'expression car vous
-   n'avez rien à dire."
+   "Prétendre que tu n'as rien à faire du droit à une vie privée car
+   tu n'as rien à cacher n'est en rien différent de prétendre que tu
+   n'as rien à faire de la liberté d'expression car tu n'as rien à
+   dire."
 
    -- Edward Snowden (traduit par moi)
