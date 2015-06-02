@@ -6,3 +6,6 @@
 :Lang: fr
 
 * `Learn languages, learn cultures, Breaking the language barrier, Tim Doner, TEDxTeen 2014 <https://www.youtube.com/watch?v=xNmf-G81Irs>`_
+
+* http://www.bastamag.net/A-Saint-Nazaire-la-vie-revee-des-lyceens
+
