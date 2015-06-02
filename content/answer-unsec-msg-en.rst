@@ -74,7 +74,3 @@ Best!
    :alt: Snowden quote about right to privacy
    :align: center
 
-"Prétendre que vous n'avez rien à faire du droit à une vie privée car
-vous n'avez rien à cacher n'est en rien différent de prétendre que
-vous n'avez rien à faire de la liberté d'expression car vous n'avez
-rien à dire.", Edward Snowden
