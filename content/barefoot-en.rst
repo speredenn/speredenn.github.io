@@ -14,3 +14,4 @@
 * http://wiki.davidmanise.com/index.php/Se_d%C3%A9placer_pieds_nus
 * http://www.lacliniqueducoureur.com/fr/informations-coureurs/chaussures-recommandees.php
 * http://www.mangervivant.fr/course-a-pied-faites-vous-cette-erreur/
+* http://5doigts.fr/
