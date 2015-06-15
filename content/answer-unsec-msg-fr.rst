@@ -76,7 +76,7 @@ communication cités ci-dessus !
 
 .. epigraph::
 
-   "Prétendre que tu n'as que faire du droit à une vie privée car tu
+   "Prétendre que tu n'as que faire du droit à la vie privée car tu
    n'as rien à cacher est du même niveau que de prétendre que tu n'as
    que faire de la liberté d'expression car tu n'as rien à dire."
 
