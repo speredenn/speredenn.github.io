@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'speredenn'
-SITENAME = u'Carnets de route'
+SITENAME = u'Explore!'
 SITEURL = 'https://speredenn.github.io'
 
 PATH = 'content'
