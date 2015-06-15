@@ -15,3 +15,7 @@
 * http://www.lacliniqueducoureur.com/fr/informations-coureurs/chaussures-recommandees.php
 * http://www.mangervivant.fr/course-a-pied-faites-vous-cette-erreur/
 * http://5doigts.fr/
+* https://www.youtube.com/playlist?list=PLD0CB48A831D0FE43
+* https://www.youtube.com/playlist?list=PL3603E31BECC80DCC
+* https://www.youtube.com/playlist?list=PLFF901EB9D3C9C2F9
+* https://www.youtube.com/playlist?list=PL592EE9A77E3AAADE
