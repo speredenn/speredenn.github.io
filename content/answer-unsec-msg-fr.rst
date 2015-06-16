@@ -32,6 +32,9 @@ messages via l'un des canaux suivants :
   <https://whispersystems.org/>`_, qui sont des applications
   **utilisant de la cryptographie à la portée de tous** ;
 
+* Via ton compte `ProtonMail <https://protonmail.ch/>`_ (speredenn
+  *at* protomail.com);
+
 * En m'appelant via un téléphone `SIP <https://ostel.co/>`_ (speredenn
   at ostel.co) **en chiffrant notre communication** avec `ZRTP
   <https://fr.wikipedia.org/wiki/ZRTP>`_ et `SRTP

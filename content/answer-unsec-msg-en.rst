@@ -33,6 +33,9 @@ me your messages through any of the following secured channels:
   software **using cryptography and encryption accessible to
   everybody**;
 
+* Via your `ProtonMail <https://protonmail.ch/>`_ account (speredenn
+  *at* protomail.com);
+
 * By phoning me with a `SIP account <https://ostel.co/>`_ (speredenn
   at ostel.co) **encrypting our call** with `ZRTP
   <https://en.wikipedia.org/wiki/ZRTP>`_ and `SRTP
