@@ -33,7 +33,7 @@ messages via l'un des canaux suivants :
   **utilisant de la cryptographie à la portée de tous** ;
 
 * Via ton compte `ProtonMail <https://protonmail.ch/>`_ (speredenn
-  *at* protomail.com);
+  *at* protonmail.com);
 
 * En m'appelant via un téléphone `SIP <https://ostel.co/>`_ (speredenn
   at ostel.co) **en chiffrant notre communication** avec `ZRTP
