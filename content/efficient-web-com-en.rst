@@ -5,3 +5,4 @@
 :Lang: en
 
 http://www.parentcenterhub.org/repository/web-reading/
+http://www.nngroup.com/articles/how-users-read-on-the-web/
